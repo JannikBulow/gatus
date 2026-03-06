@@ -8,7 +8,7 @@
     <!-- Main App Container -->
     <div v-else-if="!config || !config.oidc || config.authenticated" class="relative">
       <!-- Header -->
-      <header class="border-b bg-card/50 backdrop-blur supports-[backdrop-filter]:bg-card/60">
+      <header class="header border-b bg-card/50 backdrop-blur supports-[backdrop-filter]:bg-card/60">
         <div class="container mx-auto px-4 py-4 max-w-7xl">
           <div class="flex items-center justify-between">
             <!-- Logo and Title -->
@@ -19,22 +19,22 @@
                 target="_blank"
                 :class="['flex items-center gap-3', link && 'hover:opacity-80 transition-opacity']"
               >
-                <div class="w-12 h-12 flex items-center justify-center">
-                  <img 
-                    v-if="logo" 
-                    :src="logo" 
-                    alt="Gatus" 
+                <div class="header-logo w-12 h-12 flex items-center justify-center">
+                  <img
+                    v-if="logo"
+                    :src="logo"
+                    alt="Gatus"
                     class="w-full h-full object-contain"
                   />
-                  <img 
-                    v-else 
-                    src="./assets/logo.svg" 
-                    alt="Gatus" 
+                  <img
+                    v-else
+                    src="./assets/logo.svg"
+                    alt="Gatus"
                     class="w-full h-full object-contain"
                   />
                 </div>
                 <div>
-                  <h1 class="text-2xl font-bold tracking-tight">{{ header }}</h1>
+                  <h1 class="header-title text-2xl font-bold tracking-tight">{{ header }}</h1>
                   <p v-if="buttons && buttons.length" class="text-sm text-muted-foreground">
                     System Monitoring Dashboard
                   </p>
@@ -96,13 +96,13 @@
       </main>
 
       <!-- Footer -->
-      <footer class="border-t mt-auto">
+      <footer class="footer border-t mt-auto">
         <div class="container mx-auto px-4 py-6 max-w-7xl">
           <div class="flex flex-col items-center gap-4">
             <div class="text-sm text-muted-foreground text-center">
               Powered by <a href="https://gatus.io" target="_blank" class="font-medium text-emerald-800 hover:text-emerald-600">Gatus</a>
             </div>
-            <Social />
+            <Social class="floating-github-logo" />
           </div>
         </div>
       </footer>
