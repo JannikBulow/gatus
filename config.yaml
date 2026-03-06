@@ -1,3 +1,33 @@
+ui:
+  custom-css: |
+    :root {
+    --wezoo-color: #0F447B;
+    }
+
+    #global {
+      background-color: var(--wezoo-color);
+    }
+    
+    .header {
+      background-color: var(--wezoo-color) !important;
+    }
+      
+    .header-logo {
+      display: none !important;
+    }
+      
+    .header-title {
+      color: white;
+      font-size: 2.5rem;
+    }
+    .footer {
+      background-color: var(--wezoo-color) !important;
+    }
+      
+    .floating-github-logo {
+      display: none;
+    }
+    
 endpoints:
   - name: front-end
     group: core
